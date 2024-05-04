@@ -47,6 +47,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
@@ -67,6 +72,12 @@
         <dependency>
             <groupId>com.example.utilities</groupId>
             <artifactId>java-api-utilities</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example.utilities</groupId>
+            <artifactId>java-kafka-utilities</artifactId>
             <version>0.0.1</version>
         </dependency>
     </dependencies>
