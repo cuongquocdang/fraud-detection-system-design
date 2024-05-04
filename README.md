@@ -1,5 +1,13 @@
-# Spring Boot Azure Storage
+# Fraud Detection System Design
 
-## Azure Storage
+## Problem Statement
 
-### Blobs
+## Development
+
+### Set Up Environment
+
+### Wallet Service - Kafka Producer
+
+### Fraud Detection Service - Kafka Consumer
+
+### Integration Test
