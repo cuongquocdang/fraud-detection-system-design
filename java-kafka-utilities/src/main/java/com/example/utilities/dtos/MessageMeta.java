@@ -1,11 +1,11 @@
 package com.example.utilities.dtos;
 
 import com.example.utilities.enums.EventType;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
-@Getter
-@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class MessageMeta {
 
     private boolean autoRetry;

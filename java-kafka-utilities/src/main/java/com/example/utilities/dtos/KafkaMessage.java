@@ -1,10 +1,14 @@
 package com.example.utilities.dtos;
 
-import lombok.Getter;
-import lombok.experimental.SuperBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
-@Getter
-@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class KafkaMessage<T> extends MessageBase {
 
     private T payload;

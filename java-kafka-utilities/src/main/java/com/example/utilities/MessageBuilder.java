@@ -15,18 +15,18 @@ public class MessageBuilder {
                                             final String messageCode,
                                             final T payload) {
 
-        var meta = MessageMeta.builder()
-                .messageId(generateMessageId())
-                .serviceId(serviceId)
-                .type(eventType)
-                .timestamp(generateMessageTimestamp())
-                .build();
+        var meta = new MessageMeta();
+        meta.setMessageId(generateMessageId());
+        meta.setServiceId(serviceId);
+        meta.setType(eventType);
+        meta.setTimestamp(generateMessageTimestamp());
 
-        return KafkaMessage.<T>builder()
-                .meta(meta)
-                .messageCode(messageCode)
-                .payload(payload)
-                .build();
+        var message = new KafkaMessage<T>();
+        message.setMessageCode(messageCode);
+        message.setMeta(meta);
+        message.setPayload(payload);
+
+        return message;
     }
 
     public static String generateMessageId() {

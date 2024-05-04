@@ -1,10 +1,12 @@
 package com.example.utilities.dtos;
 
-import lombok.Getter;
-import lombok.experimental.SuperBuilder;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@SuperBuilder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class MessageBase {
 
     protected String messageCode;
