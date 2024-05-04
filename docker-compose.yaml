@@ -83,3 +83,9 @@ services:
       DYNAMIC_CONFIG_ENABLED: 'true'  # not necessary, added for tests
       KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: 'true'
       KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
+
+  redis:
+    image: redis:7.2.4
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass "P@ssword1"

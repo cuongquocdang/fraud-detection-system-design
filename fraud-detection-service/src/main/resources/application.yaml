@@ -30,9 +30,17 @@ spring:
 
   data:
     redis:
+      repositories:
+        enabled: false
       host: localhost
       port: 6379
+      ssl:
+        enabled: false
+      password: P@ssword1
+      timeout: 1000
 
+  cache:
+    type: redis
 
 kafka:
   transaction:
@@ -41,3 +49,14 @@ kafka:
 
   rule-hit:
     topic: example-safety-rule-hits-dev
+
+rules:
+  max-transactions-last-minutes:
+    id: MAX_TRANSACTIONS_LAST_MINUTES
+    minutes: 1
+    max-transactions: 2
+
+  max-amount-last-minutes:
+    id: MAX_AMOUNT_LAST_MINUTES
+    minutes: 5
+    max-amount: 1000000000
